@@ -1,9 +1,5 @@
 var cachename = 'cache-' + new Date().getTime() + '-1';
 
-function getCacheName(){
-    return 'cache-' + new Date().getTime() + '-1';
-}
-
 //Install Service Worker
 self.addEventListener('install', evt => {
     
@@ -14,8 +10,6 @@ self.addEventListener('install', evt => {
         })
     );
 });
-
-//zxczxc
 
 //Activate Service Worker
 self.addEventListener('activate', evt => {

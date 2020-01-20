@@ -1,24 +1,26 @@
 $(window).on('load', function() {
-  //  if(!checkState())
-    if('serviceWorker' in navigator) {
+
+  if('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then(function(registrations) {
+
+      if(registrations == 0) {
+        // console.log('No registered service worker yet!');
         navigator.serviceWorker.register('service-worker.js')
-            .then((reg) => console.log('service worker registered!'))
-            .catch((err) => console.log('service worker not registered!', err));
-    }
-
-
-
-    // if('serviceWorker' in navigator) {
-    //     navigator.serviceWorker.getRegistrations(function(registrations) {
-    //         for(let registration of registrations) {
-    //             registration.unregister().then(function() {
-    //                 navigator.serviceWorker.register('service-worker.js')
-    //                     .then((reg) => console.log('Service worker registered!'))
-    //                     .catch((err) => console.log('Service worker registration failed!', err));
-    //             });
-    //         }
-    //     }).catch(function(err) {
-    //         console.log('Service worker registration failed: ' . err);
-    //     });
-    // }
+            .then((reg) => console.log('Service worker successfully registered!'))
+            .catch((err) => console.log('Service worker registration failed!', err));
+      }
+      else {
+        // console.log('Already have a service worker!');
+        for (let registration of registrations) {
+          registration.unregister();
+    
+          if(registration.unregister()) {
+            navigator.serviceWorker.register('service-worker.js')
+              .then((reg) => console.log('Service worker successfully registered!'))
+              .catch((err) => console.log('Service worker registration failed!', err));
+          }
+        }
+      }
+    });
+  }
 });
