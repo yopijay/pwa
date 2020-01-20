@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Grobold';
+    src: url('../fonts/GROBOLD.ttf') format('truetype');
+}
+
+.font-grobold {
+    font-family: 'Grobold';
+}
+
+.text-light-blue {
+    color: #03A9F4;
+}
+
+.bg-light-blue {
+    background-color: #03A9F4;
+}
+
+#login-banner {
+    height: 200px;
+    width: 200px;
+}
+
+#divider {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#info { 
+    font-size: 90%;
+    line-height: 15px;
+}
+
+.font-segoe {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <link rel= "manifest" href= "manifest.json">
+        <meta name="theme-color" content= "#212121">
+
+        <title>Pofsys | Login</title>
+
+        <!-- CSS Libraries -->
+        <!-- <link rel= "stylesheet" href= "/css/app.css" type= "text/css"> -->
+        <link rel="stylesheet" href="css/bootstrap.css" type= "text/css">
+
+        <!-- Custom CSS-->
+        <link rel= "stylesheet" href= "css/main.css" type= "text/css">
+
+        <!-- Javascript Libraries -->
+        <script type= "text/javascript"src="js/slim.min.js"></script>
+        <script type= "text/javascript"src="js/popper.min.js"></script>
+        <script type= "text/javascript" src="js/bootstrap.min.js"></script>
+        <!-- <script type= "text/javascript" src="js/crypto.min.js"></script> -->
+        <script type= "text/javascript" src= "js/access.js"></script>
+        <!-- <script type= "text/Javascript" src= "/js/app.js"></script> -->
+
+        <!-- Custom Javascript -->
+        <!-- <script type= "text/javascript" src= "js/index-db.js"></script> -->
+        <script type= "text/javascript" src= "js/login.js"></script>
+
+    </head>
+
+    <body>
+            <div class= "container-fluid py-5 bg-dark position-fixed h-100">
+                <div class= "row justify-content-center">
+                    <div class= "col-xl-4 col-lg-4 col-md-5 col-sm-10 col-12">
+                        <!-- <div class= "card py-5 bg-dark"> -->
+                            <div class= "row pt-4">
+                                <div class= "col-12 mt-5">
+                                    <h1 class= "font-grobold text-center text-white"><span class= "text-light-blue">P</span>OFSYS </h1>
+                                </div>
+                                <div class= "col-2 offset-5 border-bottom mb-3"></div>
+                                <div class= "col-8 offset-2 mb-5">
+                                    <p class= "text-muted font-weight-light text-center font-italic font-segoe" id= "info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                                </div>
+                            </div>
+                            <div class= "col-10 offset-1 mt-5">
+                                <form method= "POST">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control bg-white text-dark font-segoe border-secondary" id="email_txtbox" placeholder="Email - Username - Phone">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control bg-white text-dark font-segoe border-secondary" id="password_txtbox" placeholder="Password">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class= "col-10 offset-1 mt-1">
+                                <button type="button" class="btn bg-light-blue text-white btn-xl btn-lg btn-md btn-sm btn-block font-grobold py-2" id= "login-btn">LOGIN</button>
+                            </div>
+                            <div class= "col-10 offset-1 mt-1">
+                                <a href= "#" class= "text-right float-right text-white font-segoe"><u>Forgot Password?</u></a>
+                            </div>
+                            <div class= "col-10 offset-1 mt-5">
+                                <p class= "font-segoe text-white">Don`t have an account? <a href= "registration.html" class= "font-segoe text-light-blue"><u>Register here!</u></a></p>
+                            </div>
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+    </body>
+</html>
